@@ -2,7 +2,11 @@ import React, {Component} from "react";
 
 function Home(){
     return (
-        <div><h1>ESTAMOS EN Home</h1></div>
+        
+        <div>
+            <div><h1>ESTAMOS EN Home</h1></div> 
+         
+        </div>
     );
 }
 export default Home;
