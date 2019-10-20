@@ -1,4 +1,5 @@
 import React from "react";
+import "./style/CustomFooter.scss"
 function CustomFooter(){
     return(
         <div className="myFooter">

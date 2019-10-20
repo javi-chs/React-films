@@ -1,8 +1,44 @@
 import React, {Component} from "react";
-
-function FilmsCategory(){
-    return (
-        <div><h1>ESTAMOS EN FilmsCategory </h1></div>
-    );
+import ObtenerPelis from "../services/ObtenerPelis";
+import ReactJson from 'react-json-view'
+import ListaDePeliculas from "../components/ListaDePeliculas"
+import { Spin, Alert } from 'antd';
+class FilmsCategory extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+        peliculas: [],
+        categoria:"",
+        }
+        this.componentDidMount=()=>{
+        console.log("El componente se ha montado");
+         this.getPeliculas(); 
+      }
+        this.componentDidUpdate= ()=>{
+          console.log("EL componente se ha actualizado");
+          this.getPeliculas();
+        }
+  }
+ async getPeliculas(){
+  const categoriaAct = this.props.match.params.categoryName;
+    if(categoriaAct !== this.state.categoria){
+        try{
+          const data = await ObtenerPelis.getMoviesByCategory(categoriaAct);
+        this.setState({
+            peliculas:data.results,
+            categoria: categoriaAct,
+          });
+        } 
+        catch(error){console.log(error)}    
+    }
 }
+render(){
+  return <div>
+    <h1>Peliculas:  {this.state.categoria}</h1>
+    <ListaDePeliculas peliculas={this.state.peliculas}></ListaDePeliculas>
+  </div>
+}
+
+}
+
 export default FilmsCategory;

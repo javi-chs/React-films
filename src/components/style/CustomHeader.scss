@@ -1,0 +1,28 @@
+.myHeader{
+    height:50px;
+    background-color: #37B08F;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+  }
+  .myButtonHeader{
+  
+    color:white;
+    background-color: #37B08F;
+    border:none;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 15px;
+    &:hover{
+      color: #414141;
+      border: 1px solid white;
+    }
+    &:active{
+      color: #414141;
+      border: 1px solid white;
+    }
+  }
+  

@@ -7,46 +7,9 @@
   color:white;
   background-color: #414141;
 }
-.myHeader{
-  height:50px;
-  background-color: #37B08F;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap ;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2em;
-}
-.myButton{
 
-  color:white;
-  background-color: #37B08F;
-  border:none;
-  border-radius: 20px;
-  font-size: 20px;
-  padding: 15px;
-  &:hover{
-    color: #414141;
-    border: 1px solid white;
-  }
-  &:active{
-    color: #414141;
-    border: 1px solid white;
-  }
-}
-
-
-.myFooter{
-  height:50px;
-  background-color: #37B08F;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap ;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2em;
-  
- 
+h1{
+  align-content: center;
 }
 
 .misCajas{
@@ -69,3 +32,5 @@
     font-size: 25px;
     color:white
   } 
+
+  

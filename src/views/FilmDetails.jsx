@@ -1,8 +1,20 @@
 import React, {Component} from "react";
+//import ObttenerPelis from "../services/ObtenerPelis"
 
-function FilmDetails(){
-    return (
-        <div><h1>ESTAMOS EN FilmDetails </h1></div>
+class FilmDetails extends Component{
+    constructor(props){
+        super(props)
+        this.state={
+            miProp:"",
+        }
+    }
+render(){
+    return(
+        <div><h1>Detalles de pelicula</h1></div>
     );
 }
+
+}
+
+
 export default FilmDetails;
