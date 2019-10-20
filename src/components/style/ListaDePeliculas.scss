@@ -7,4 +7,28 @@
 .misLinks{
     all: unset;
     color:white;
+    & .ant-card{
+
+        &.ant-card-cover{
+            margin: 0px;
+        padding: 0px;
+        }
+    }}
+.Caratula{
+    margin: 0px;
+    padding: 0px;
+    &:hover{
+        transform: scale(1.020);
+        transition: transform 1.5s ease-in-out;
+    }
+}
+.MetaDescription{
+    padding:0.5em;
+    margin:0;
+    background-color: rgba($color: #37b08f, $alpha: 0.7);
+    width:184px;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #37b08f;
+    }
 }

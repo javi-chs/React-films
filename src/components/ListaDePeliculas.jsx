@@ -19,12 +19,11 @@ function ListaDePeliculas({peliculas}) {
               key={pelicula.id}
               hoverable
               bordered={false}
-              style={{ 
-                unSet: "all",
-                textDecoration: 'none',
-                color: 'white',
-              }}
-              cover={<img src={"https://image.tmdb.org/t/p/w200/" + pelicula.poster_path} alt={pelicula.overview}/>
+              cover={
+              <img 
+                className="Caratula" 
+                src={"https://image.tmdb.org/t/p/w200/" + pelicula.poster_path} 
+                alt={pelicula.overview}/>
               }
             >
               <Meta 

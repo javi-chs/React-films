@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import ObtenerPelis from "../services/ObtenerPelis";
-import ReactJson from 'react-json-view'
 import ListaDePeliculas from "../components/ListaDePeliculas"
-import { Spin, Alert } from 'antd';
+import"./style/FilmsCategory.scss"
+
 class FilmsCategory extends Component{
   constructor(props){
     super(props);
@@ -33,8 +33,8 @@ class FilmsCategory extends Component{
     }
 }
 render(){
-  return <div>
-    <h1>Peliculas:  {this.state.categoria}</h1>
+  return <div className="container">
+      <h1 className="h1"> {this.state.categoria}</h1>
     <ListaDePeliculas peliculas={this.state.peliculas}></ListaDePeliculas>
   </div>
 }

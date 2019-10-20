@@ -2,6 +2,12 @@ import React, {Component} from "react";
 import ObttenerPelis from "../services/ObtenerPelis"
 import "./style/FilmDetails.scss"
 
+
+
+
+
+
+
 class FilmDetails extends Component{
     constructor(props){
         super(props)
@@ -34,24 +40,39 @@ class FilmDetails extends Component{
 render(){
     const pelicula = this.state.pelicula;
    
-   
+    //<img src={"https://image.tmdb.org/t/p/w300/" + pelicula.backdrop_path} alt={pelicula.title}></img>
     if(pelicula){
+        
+        
          return(
-             <div className="miPeli"> 
-                 <h1>Detalles de pelicula</h1>
-                 <div className="PaginaPelicula">
+            
+            <div>
+               
+                 <div
+                
+                 className="PaginaPelicula">
                       
+                        <h1>{pelicula.title} {pelicula.release_date}</h1>
+                        <div className="GeneralInfo">
+                            <div className="Caratulas">
+                            <img src={"https://image.tmdb.org/t/p/w300/" + pelicula.poster_path} alt={pelicula.title}></img> 
+                           
+                            </div>
+                            <div className="Ratings">
+                                 <h2>Género: {pelicula.genres[0].name} </h2>
+                                 <h2>{pelicula.vote_count} Votos</h2>
+                                 <h2>Valoración: {pelicula.vote_average} </h2>
+                            </div>
+                        </div>
                     
-                    <img src={"https://image.tmdb.org/t/p/w200/" + pelicula.poster_path} alt={pelicula.overview}></img> 
-                    <h2>{pelicula.title} {pelicula.release_date}</h2>
-                    <h3>Genero: {pelicula.genres[0].name} </h3>
-                    <h3>Total de Votos: {pelicula.vote_count} </h3>
-                    <h3>Valoración: {pelicula.vote_average} </h3>
-                    <p>{pelicula.overview}</p>
+                        <div className="PeliculaInfo">
+                       
+                            <p>{pelicula.overview}</p>
                  
+                        </div>
                     
                 </div>
-            </div>
+                </div >
     );
     }
     else{

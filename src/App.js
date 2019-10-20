@@ -21,7 +21,7 @@ function App() {
             <Switch>
                 <Route exact path="/categorias/:categoryName" component= {FilmsCategory}/>
                 <Route exact path="/pelicula/:id" component={FilmDetails}/>
-                <Route exact path="/" component={Home}/>
+                <Redirect path='/' exact to='categorias/upcoming' />
                 <Route path="*"component={NotFound}/>
 
 
