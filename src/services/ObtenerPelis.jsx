@@ -23,8 +23,9 @@ async  getMoviesByCategory(category, page = 1) {
 
   async getMovieById(id) {
     const url = "https://api.themoviedb.org/3/movie/"+ id + "?api_key="+this.APIKEY+"&language=es-ES";
-    const { pelicula } = await axios.get(url);
-    return pelicula;
+    const { data } = await axios.get(url);
+    console.log(data);
+    return data;
   }
 
   getLlamadasConseguidas() {
